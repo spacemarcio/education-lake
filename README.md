@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/spacemarcio/education-lake/blob/25285e4a12e947656482822ad1eb4356cffdff80/readme-images/educalake-logo.png" width="864" height="288"/>
+  <img src="https://github.com/spacemarcio/education-lake/blob/c979bf34edaf4777525937e9d51687f59be01777/readme-images/educalake-logo.png" width="864" height="288"/>
 </p>
 
 # EducaLake, o que é? Onde vive? O que faz? Hoje mesmo, nesse repositório aqui!
