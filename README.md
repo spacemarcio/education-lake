@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/spacemarcio/education-lake/blob/c979bf34edaf4777525937e9d51687f59be01777/readme-images/educalake-logo.png" width="864" height="288"/>
+  <img src="https://github.com/spacemarcio/education-lake/blob/c979bf34edaf4777525937e9d51687f59be01777/readme-images/educalake-logo.png"/>
 </p>
 
 ## EducaLake, o que é? Onde vive? O que come? Hoje mesmo, nesse repositório aqui!
@@ -11,7 +11,7 @@ EducaLake é um projeto desenvolvido como parte das atividades do Bootcamp Engen
 A cadeia de processos executada na EducaLake pode ser observada abaixo:
 
 <p align="center">
-  <img src="https://github.com/spacemarcio/education-lake/blob/31e8e4166f78d68cd65b25eece23e19aa1f7b0f2/readme-images/data-workflow.png" width="2178" height="392"/>
+  <img src="https://github.com/spacemarcio/education-lake/blob/31e8e4166f78d68cd65b25eece23e19aa1f7b0f2/readme-images/data-workflow.png"/>
 </p>
 
 Primeiro, dados 'crus' são baixados diretamento do repositório do INEP e incoporados a plataforma, depois passam por transformações que otimizam a consulta aos dados, então passam para uma etapa em que são disponibilizados para serem consultados.
