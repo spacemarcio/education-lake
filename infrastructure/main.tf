@@ -25,6 +25,6 @@ resource "aws_s3_bucket_object" "code_silver" {
   bucket = aws_s3_bucket.educalake-code.id
   key = "bronze_job.py"
   acl = "private"
-  source = "code/bronze_job.py"
-  etag = filemd5("code/bronze_job.py")
+  source = "../code/bronze_job.py"
+  etag = filemd5("../code/bronze_job.py")
 }
