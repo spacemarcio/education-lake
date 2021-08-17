@@ -1,5 +1,5 @@
 resource "aws_glue_job" "etl" {
-  name     = "example"
+  name     = "EducalakeETL"
   role_arn = aws_iam_role.glue_role.arn
 
   command {

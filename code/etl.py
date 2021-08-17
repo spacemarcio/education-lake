@@ -1,6 +1,17 @@
-from pyspark.sql import SparkSession
+import sys
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
 
-spark = SparkSession.builder.appName('SparkApp').getOrCreate()
+## @params: [JOB_NAME]
+args = getResolvedOptions(sys.argv, ['JOB_NAME'])
+
+sc = SparkContext()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
 
 censo = spark \
 	.read \
@@ -8,10 +19,10 @@ censo = spark \
 	.option('header',True) \
 	.option('inferSchema', True) \
 	.option('delimiter', '|') \
-	.load('s3://educalake-bronze/')
+	.load('s3://educalake-raw/')
 
 censo \
 	.write \
 	.mode('overwrite') \
     .partitionBy("REGIAO") \
-	.parquet('s3://educalake-silver/')
+	.parquet('s3://educalake-staging/')
