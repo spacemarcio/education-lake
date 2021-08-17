@@ -4,7 +4,9 @@
 
 ## EducaLake, o que é? Onde vive? O que come? Hoje mesmo, nesse repositório aqui!
 
-EducaLake é um projeto desenvolvido como parte das atividades do Bootcamp Engenheiro de Dados Cloud, pelo IGTI. Trata-se de uma plataforma que busca democratizar o acesso a dados púbicos sobre educação para gestores e especialistas. A plataforma busca eliminar a necessidade de uso de linguagem de programação para investigar e gerar insights a partir dos dados provendo uma interface low-code. Além disso, oferece uma abstração para acessar dados brutos, que em geral exigem conhecimento técnico e poder compucional para gerenciar os arquivos.
+EducaLake é um projeto desenvolvido como parte das atividades do Bootcamp Engenheiro de Dados Cloud, pelo IGTI. Trata-se de um plataforma que busca democratizar o acesso a dados púbicos sobre educação para gestores e especialistas. A plataforma busca eliminar a necessidade de uso de linguagem de programação para investigar e gerar insights a partir dos dados provendo uma interface low-code. Além disso, oferece uma abstração para acessar dados brutos, que em geral exigem conhecimento técnico e poder compucional para gerenciar os arquivos.
+
+Nesse repositório, documento o MVP do projeto.
 
 ## Tá, mas como funciona?
 
@@ -20,4 +22,12 @@ A cadeia de processos executada na EducaLake pode ser observada abaixo:
 
 3) Por fim os dados são disponibilizados para consulta via Metabase, que oferece uma ferramenta de consultas 'low-code' aos dados, integrado ao AWS Athena. 
 
-Como pode ser observado, optei por uma arquitetura provisionadas pela AWS. Todos os recursos e workflows são criados de forma automatizada por meio de Terraform.
+A arquitetura é provisionada na AWS. Todos os recursos e workflows são criados de forma automatizada por meio de Terraform e Github Actions.
+
+## E roda?
+
+<p align="center">
+  <img src="https://www.imagensanimadas.com/data/media/695/em-construcao-imagem-animada-0038.gif"/>
+</p>
+
+# Por hoje é isso, mas depois tem mais!
