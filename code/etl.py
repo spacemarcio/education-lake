@@ -25,4 +25,4 @@ censo \
 	.write \
 	.mode('overwrite') \
     .partitionBy("REGIAO") \
-	.parquet('s3://educalake-staging/')
+	.parquet('s3://educalake-staging/CENSO.parquet')
