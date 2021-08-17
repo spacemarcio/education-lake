@@ -14,4 +14,10 @@ A cadeia de processos executada na EducaLake pode ser observada abaixo:
   <img src="https://github.com/spacemarcio/education-lake/blob/31e8e4166f78d68cd65b25eece23e19aa1f7b0f2/readme-images/data-workflow.png"/>
 </p>
 
-Primeiro, dados 'crus' são baixados diretamento do repositório do INEP e incoporados a plataforma, depois passam por transformações que otimizam a consulta aos dados, então passam para uma etapa em que são disponibilizados para serem consultados.
+1 ) Primeiro os dados 'crus' são baixados diretamente do respositório do INEP e armazenados no S3 por meio de uma Lambda Function.
+
+2) Depois os dados no S3 passam por Glue Job que trata de inferir o tipo de cada variável e pois salvar os dados no formato Parquet, particionados para otimizar a consulta aos dados.
+
+3) Por fim os dados são disponibilizados para consulta via Metabase, que oferece uma ferramenta de consultas 'low-code' aos dados, integrado ao AWS Athena. 
+
+Como pode ser observado, optei por uma arquitetura provisionadas pela AWS. Todos os recursos e workflows são criados de forma automatizada por meio de Terraform.
