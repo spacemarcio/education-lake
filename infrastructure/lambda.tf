@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "crawling_data" {
-  filename      = "lambda_function_payload.zip"
+  filename      = "../lambda/lambda_function_payload.zip"
   function_name = "EducalakeCrawler"
   role          = aws_iam_role.lambda.arn
   handler       = "lambda_function.handler"
