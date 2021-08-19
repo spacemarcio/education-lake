@@ -27,10 +27,14 @@ jobs :
         aws-secret-access-key : ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region : us-east-2
 
+    - name : Build Lambda package
+      run : |
+        sh make_lambda.sh
+
     - name : IaC start
       run : |
         cd infrastructure
         terraform init
         terraform validate
         terraform plan
-        terraform apply -auto-approve
+        # terraform apply -auto-approve
