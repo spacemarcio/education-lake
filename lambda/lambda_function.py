@@ -2,7 +2,7 @@ import boto3
 import requests
 import csv
 
-url = 's3://inep-censo-files/escolas.csv'
+url = 'https://inep-censo-files.s3.us-east-2.amazonaws.com/ESCOLAS.csv'
 
 def handler(event, context):
     
