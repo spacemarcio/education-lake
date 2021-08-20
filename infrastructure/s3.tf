@@ -12,3 +12,8 @@ resource "aws_s3_bucket" "codes" {
   bucket = "educalake-codes"
   acl    = "private"
 }
+
+resource "aws_s3_bucket" "queries" {
+  bucket = "educalake-queries"
+  acl    = "private"
+}
