@@ -20,7 +20,7 @@ resource "aws_glue_catalog_database" "staging_zone" {
   name = "staging_db"
 }
 
-resource "aws_glue_crawler" "consumer_zone" {
+resource "aws_glue_crawler" "staging_zone" {
   database_name = aws_glue_catalog_database.consumer_zone.name
   name          = "staging_crawler"
   role          = aws_iam_role.glue_role.arn
