@@ -2,9 +2,6 @@ import boto3
 import requests
 import pandas as pd 
 
-s3 = boto3.resource('s3')
-bucket = s3.Bucket('educalake-raw')
-
 url = 's3://inep-censo-files/escolas.csv'
 
 def handler(event, context):
