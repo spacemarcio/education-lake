@@ -9,7 +9,8 @@ resource "aws_glue_job" "etl_job" {
 
 resource "aws_glue_trigger" "etl_trigger" {
   name = "EducalakeTrigger"
-  type = "ON_DEMAND"
+  type = "SCHEDULED"
+  schedule = "cron(0/15 * * * ? *)"
 
   actions {
     job_name = aws_glue_job.etl_job.name
@@ -32,9 +33,15 @@ resource "aws_glue_crawler" "staging_zone" {
 
 resource "aws_glue_trigger" "crawler_trigger" {
   name = "EducalakeCrawlerTrigger"
-  type = "ON_DEMAND"
+  type = "CONDITIONAL"
 
   actions {
     crawler_name = aws_glue_crawler.staging_zone.name
   }
+  
+  predicate {
+    conditions {
+      job_name = aws_glue_job.etl_job.name
+      state    = "SUCCEEDED"
+    }
 }
