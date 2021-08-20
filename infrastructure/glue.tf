@@ -29,3 +29,12 @@ resource "aws_glue_crawler" "staging_zone" {
     path = "s3://${aws_s3_bucket.raw.bucket}"
   }
 }
+
+resource "aws_glue_trigger" "crawler_trigger" {
+  name = "EducalakeCrawlerTrigger"
+  type = "ON_DEMAND"
+
+  actions {
+    crawler_name = aws_glue_crawler.staging_zone.name
+  }
+}
