@@ -1,4 +1,10 @@
-resource "aws_athena_database" "athena" {
-  name   = "staging_db"
-  bucket = aws_s3_bucket.queries.bucket
+resource "aws_athena_workgroup" "users" {
+  name = "dev"
+
+  configuration {
+
+    result_configuration {
+      output_location = "s3://${aws_s3_bucket.queries.bucket}/output/"
+    }
+  }
 }
