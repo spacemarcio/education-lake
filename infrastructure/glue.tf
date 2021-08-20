@@ -26,7 +26,7 @@ resource "aws_glue_crawler" "staging_zone" {
   role          = aws_iam_role.glue_role.arn
 
   s3_target {
-    path = "s3://${aws_s3_bucket.raw.bucket}"
+    path = "s3://${aws_s3_bucket.staging.bucket}"
   }
 }
 
