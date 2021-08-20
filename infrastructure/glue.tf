@@ -16,12 +16,8 @@
 #   }
 # }
 
-resource "aws_glue_catalog_database" "staging_zone" {
-  name = "staging_db"
-}
-
 resource "aws_glue_crawler" "staging_zone" {
-  database_name = aws_glue_catalog_database.staging_zone.name
+  database_name = aws_athena_database.athena.name
   name          = "staging_crawler"
   role          = aws_iam_role.glue_role.arn
 

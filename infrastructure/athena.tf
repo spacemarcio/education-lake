@@ -1,4 +1,4 @@
-resource "aws_athena_database" "queries" {
-  name   = aws_glue_catalog_database.staging_zone.name
+resource "aws_athena_database" "athena" {
+  name   = "staging_db"
   bucket = aws_s3_bucket.queries.bucket
 }
