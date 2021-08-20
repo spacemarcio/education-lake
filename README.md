@@ -30,6 +30,6 @@ Em bom Recifês eu te respondo, opraí:
 
 <p align="center">
   <img src="https://www.imagensanimadas.com/data/media/695/em-construcao-imagem-animada-0038.gif"/>
-</p> 
+</p>
 
 # Por hoje é isso, mas depois tem mais!
