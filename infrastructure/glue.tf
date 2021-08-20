@@ -44,4 +44,5 @@ resource "aws_glue_trigger" "crawler_trigger" {
       job_name = aws_glue_job.etl_job.name
       state    = "SUCCEEDED"
     }
+  }
 }
