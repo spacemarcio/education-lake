@@ -4,7 +4,7 @@ resource "aws_lambda_function" "crawling_data" {
   role          = aws_iam_role.lambda.arn
   handler       = "lambda_function.handler"
   memory_size   = 128
-  timeout       = 30
+  timeout       = 480
 
   source_code_hash = filebase64sha256("../lambda/lambda_function_payload.zip")
 
