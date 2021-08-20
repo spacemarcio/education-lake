@@ -10,3 +10,14 @@ resource "aws_lambda_function" "crawling_data" {
 
   runtime = "python3.8"
 }
+
+data "aws_lambda_invocation" "crawler_invocation" {
+  function_name = aws_lambda_function.crawling_data.function_name
+
+  input = <<JSON
+{
+  "key1": "value1",
+  "key2": "value2"
+}
+JSON
+}
