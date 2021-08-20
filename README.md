@@ -29,7 +29,7 @@ A arquitetura é provisionada na AWS. Todos os recursos e workflows são criados
 Em bom Recifês eu te respondo, opraí: 
 
 <p align="center">
-  <img src="https://www.imagensanimadas.com/data/media/695/em-construcao-imagem-animada-0038.gif"/>
+  <img src="https://www.imagensanimadas.com/data/media/695/em-construcao-imagem-animada-0038.gif"/> 
 </p> 
 
 # Por hoje é isso, mas depois tem mais!
