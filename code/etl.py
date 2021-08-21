@@ -24,5 +24,5 @@ censo = spark \
 censo \
 	.write \
 	.mode('overwrite') \
-    .partitionBy("REGIAO") \
+    .partitionBy("CO_REGIAO") \
 	.parquet('s3://educalake-staging/CENSO.parquet')
