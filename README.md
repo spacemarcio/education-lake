@@ -21,7 +21,7 @@ Por debaixo dos panos, o Educalake possui uma cadeira de ingestão, processament
 Com relação aos aspectos mais técnicos do sistema, toda a infraestrura core da plataforma é desenvolvida a partir de IaC, por meio do Terraform, com deploy ocorre por meio de Github Actions na AWS. O scraping dos dados do site do INEP é realizado por meio de Lambda Functions. As transformações para otimização das consultas são feitas no Glue e a criação e alimentação do banco de dados é executada a partir de um Glue Crawler. Os dados ficam disponibilizados para consulta via Athena, que possui integração com o Metabase.
 
 <p align="center">
-  <img src="https://github.com/spacemarcio/education-lake/blob/31e8e4166f78d68cd65b25eece23e19aa1f7b0f2/readme-images/data-workflow.png"/>
+  <img src="https://github.com/spacemarcio/education-lake/blob/81ce64339e9f955860d59713ec174d6968131283/readme-images/architeture.png"/>
 </p>
 
 
