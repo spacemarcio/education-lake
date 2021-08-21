@@ -4,25 +4,26 @@
 
 ## EducaLake, o que é? Onde vive? O que come? Hoje mesmo, nesse repositório aqui!
 
-EducaLake é um projeto desenvolvido como parte das atividades do Bootcamp Engenheiro de Dados Cloud, pelo IGTI. Trata-se de um plataforma que busca democratizar o acesso a dados púbicos sobre educação para gestores e especialistas. A plataforma busca eliminar a necessidade de uso de linguagem de programação para investigar e gerar insights a partir dos dados provendo uma interface low-code. Além disso, oferece uma abstração para acessar dados brutos, que em geral exigem conhecimento técnico e poder compucional para gerenciar os arquivos.
+EducaLake é um projeto desenvolvido como parte das atividades do Bootcamp Engenheiro de Dados Cloud, pelo IGTI. Trata-se de uma plataforma que busca democratizar o acesso a dados púbicos sobre educação para gestores, especialistas e profissionais da educação. Para isso, a plataforma oferece um canal de consultas e criação de dashboards no modelo SaaS, eliminando a necessidade de fazer download de arquivos, organizar documentação ou qualquer trabalheira nada divertida.
+
+Além disso, Educalake possui integração com Metabase, que possui uma interface low-code que permite a investigação dos dados e geração de insights sem necessidade de linguagem de programação. Com uma curva de aprendizagem mais baixa e sem necessidade de preocupação com poder computacional, tenho como objetivo aproximar a comunidade interessada em educação de Ciência de Dados, buscando favorecer um cenário de decisão data-driven.
 
 Nesse repositório, documento o MVP do projeto.
 
 ## Tá, mas como funciona?
 
-A cadeia de processos executada na EducaLake pode ser observada abaixo:
+Por debaixo dos panos, o Educalake possui uma cadeira de ingestão, processamento e disponibilização dos dados. Abaixo é possível visualizar o dataflow dentro da plataforma. 
 
 <p align="center">
   <img src="https://github.com/spacemarcio/education-lake/blob/31e8e4166f78d68cd65b25eece23e19aa1f7b0f2/readme-images/data-workflow.png"/>
 </p>
 
-1) Primeiro os dados 'crus' são baixados diretamente do respositório do INEP e armazenados no S3 por meio de uma Lambda Function.
+Com relação aos aspectos mais técnicos do sistema, toda a infraestrura core da plataforma é desenvolvida a partir de IaC, por meio do Terraform, com deploy ocorre por meio de Github Actions na AWS. O scraping dos dados do site do INEP é realizado por meio de Lambda Functions. As transformações para otimização das consultas são feitas no Glue e a criação e alimentação do banco de dados é executada a partir de um Glue Crawler. Os dados ficam disponibilizados para consulta via Athena, que possui integração com o Metabase.
 
-2) Depois os dados no S3 passam por Glue Job que trata de inferir o tipo de cada variável e pois salvar os dados no formato Parquet, particionados para otimizar a consulta aos dados.
+<p align="center">
+  <img src="https://github.com/spacemarcio/education-lake/blob/31e8e4166f78d68cd65b25eece23e19aa1f7b0f2/readme-images/data-workflow.png"/>
+</p>
 
-3) Por fim os dados são disponibilizados para consulta via Metabase, que oferece uma ferramenta de consultas 'low-code' aos dados, integrado ao AWS Athena. 
-
-A arquitetura é provisionada na AWS. Todos os recursos e workflows são criados de forma automatizada por meio de Terraform e Github Actions.
 
 ## E roda?
 
