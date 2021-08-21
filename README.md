@@ -30,7 +30,7 @@ Com relação aos aspectos mais técnicos do sistema, toda a infraestrura core d
 Em bom Recifês eu te respondo, opraí: 
 
 <p align="center">
-  <img src="https://www.imagensanimadas.com/data/media/695/em-construcao-imagem-animada-0038.gif"/>
+  <img src="https://github.com/spacemarcio/education-lake/blob/db6064f1370fd09400aa052378847be06d4383a6/readme-images/demo.gif"/>
 </p>
 
 # Por hoje é isso, mas depois tem mais!
